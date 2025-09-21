@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ----- Base (white background) ----- */
+html, body, #root { height: 100%; }
+body { @apply bg-white text-slate-900; }
+
+/* ----- Reusable UI ----- */
+.input {
+  @apply w-full max-w-xl rounded-xl border border-slate-300 bg-white px-4 py-2.5
+         shadow-sm transition placeholder:text-slate-400
+         focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500;
+}
+
+.select {
+  @apply rounded-xl border border-slate-300 bg-white px-3 py-2 shadow-sm
+         focus:outline-none focus:ring-4 focus:ring-indigo-100 focus:border-indigo-500;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl bg-indigo-600 px-4 py-2 text-sm font-semibold
+         text-white shadow-sm transition hover:bg-indigo-700 active:scale-[0.98]
+         focus:outline-none focus:ring-4 focus:ring-indigo-200 disabled:opacity-60 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm
+         font-medium text-slate-700 shadow-sm transition hover:bg-slate-50
+         focus:outline-none focus:ring-4 focus:ring-slate-200 disabled:opacity-60 disabled:cursor-not-allowed;
+}
+
+/* Card */
+.card { @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm; }
+
+/* Small pill (date) */
+.pill { @apply inline-flex items-center rounded-full bg-indigo-100 px-2 py-0.5 text-[11px] font-semibold text-indigo-700; }
+
+/* Section wrapper */
+.panel { @apply rounded-2xl border border-slate-200 bg-white p-5 shadow-sm; }
+
+/* Tiny label */
+.row-label { @apply mb-1 text-[11px] font-bold uppercase tracking-widest text-slate-500; }
